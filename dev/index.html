@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Site de vulgarisation scientifique sur la recherche eye-tracking et troubles du spectre de l'autisme (TSA) chez les enfants de 2 à 7 ans - INSERM">
+    <meta name="keywords" content="autisme, TSA, eye-tracking, oculométrie, recherche scientifique, INSERM, enfants">
+    <meta name="author" content="INSERM">
+
+    <title>Eye-Tracking & Autisme - Recherche Scientifique INSERM</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/wavy-sections.css">
+    <link rel="stylesheet" href="css/scroll-animations.css">
+</head>
+
+<body>
+
+    <!-- Navigation (sticky) -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm"
+        style="background: linear-gradient(90deg, #009DC1 0%, #005291 100%);" aria-label="Navigation principale">
+        <div class="container">
+
+            <a class="navbar-brand" href="#" style="color: white; font-weight: 700;">
+                <img src="assets/logo.svg" alt="Logo Eye-Tracking TSA"
+                    style="height: 40px; margin-right: 10px; vertical-align: middle;">
+                Eye-Tracking & TSA
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#contexte"
+                            style="color: white; font-weight: 600;">Contexte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience"
+                            style="color: white; font-weight: 600;">L'Expérience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#fonctionnement"
+                            style="color: white; font-weight: 600;">Eye-Tracking</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resultats"
+                            style="color: white; font-weight: 600;">Résultats</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#conclusions"
+                            style="color: white; font-weight: 600;">Conclusions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="analyse-eyetracking.html"
+                            style="color: white; font-weight: 600;">Analyse UX</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#equipe"
+                            style="color: white; font-weight: 600;">Équipe</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-new" aria-label="Introduction et présentation de l'étude">
+        <div class="container">
+            <span class="badge-info">Recherche INSERM • Vulgarisation scientifique</span>
+            <h1>Comprendre l'autisme grâce à <span class="text-primary">l'eye-tracking</span></h1>
+            <p class="lead">Découvrez comment l'analyse du regard nous aide à mieux comprendre les particularités
+                perceptives des enfants avec troubles du spectre de l'autisme.</p>
+
+            <div class="hero-actions">
+                <button class="btn-primary"
+                    onclick="document.getElementById('resultats').scrollIntoView({behavior: 'smooth'})">Explorer les
+                    résultats ↓</button>
+                <button class="btn-secondary"
+                    onclick="document.getElementById('fonctionnement').scrollIntoView({behavior: 'smooth'})">Qu'est-ce
+                    que l'eye-tracking ?</button>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat">
+                    <div class="stat-number">44</div>
+                    <div class="stat-label">Enfants participants</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Zones d'intérêt</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Paramètres mesurés</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Contexte TSA/TND -->
+    <section id="contexte" class="bg-white" aria-label="Contexte de la recherche">
+        <div class="container">
+            <p class="section-label">CONTEXTE</p>
+            <h2 class="text-center mb-5">Comprendre les Troubles du Spectre de l'Autisme</h2>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="accordionContexte">
+                        <!-- Accordion Item 1 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse1">
+                                    Qu'est-ce que l'autisme (TSA) ?
+                                </button>
+                            </h3>
+                            <div id="collapse1" class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionContexte">
+                                <div class="accordion-body">
+                                    <p>Les <strong>Troubles du Spectre de l'Autisme (TSA)</strong> sont des troubles
+                                        neurodéveloppementaux qui affectent la communication sociale et le comportement.
+                                        Les personnes autistes peuvent présenter :</p>
+                                    <ul>
+                                        <li>Des difficultés dans les interactions sociales</li>
+                                        <li>Des particularités dans la communication verbale et non-verbale</li>
+                                        <li>Des comportements répétitifs et des intérêts restreints</li>
+                                        <li>Une sensibilité sensorielle différente</li>
+                                    </ul>
+                                    <p class="text-muted mb-0">L'autisme se manifeste différemment chez chaque personne,
+                                        d'où l'utilisation du terme "spectre".</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion Item 2 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse2">
+                                    Développement Typique (DT) vs TSA
+                                </button>
+                            </h3>
+                            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionContexte">
+                                <div class="accordion-body">
+                                    <p>Dans cette recherche, nous comparons deux groupes d'enfants âgés de 2 à 7 ans :
+                                    </p>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"><span class="badge badge-dt">DT</span>
+                                                        Développement Typique</h4>
+                                                    <p>Enfants suivant un développement neurologique standard, sans
+                                                        diagnostic de TSA.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"><span class="badge badge-tsa">TSA</span>
+                                                        Troubles du Spectre de l'Autisme</h4>
+                                                    <p>Enfants ayant reçu un diagnostic de TSA selon les critères
+                                                        cliniques établis.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion Item 3 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse3">
+                                    Pourquoi étudier le regard ?
+                                </button>
+                            </h3>
+                            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionContexte">
+                                <div class="accordion-body">
+                                    <p>Le <strong>regard</strong> joue un rôle crucial dans la communication sociale.
+                                        Des études ont montré que les personnes autistes peuvent avoir des
+                                        <strong>patterns de regard différents</strong>, notamment :
+                                    </p>
+                                    <ul>
+                                        <li>Moins de fixations sur les yeux des autres personnes</li>
+                                        <li>Plus d'attention portée à d'autres zones du visage (bouche, contours)</li>
+                                        <li>Des temps de latence différents pour explorer les visages</li>
+                                    </ul>
+                                    <p class="mb-0">Comprendre ces différences peut aider au <strong>diagnostic
+                                            précoce</strong> et à l'adaptation des interventions thérapeutiques.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: L'Expérience de Recherche -->
+    <section id="experience" style="background-color: var(--neutral-100);" aria-label="L'expérience de recherche">
+        <div class="container">
+            <p class="section-label">L'EXPÉRIENCE</p>
+            <h2 class="text-center mb-5">Comment s'est déroulée l'étude ?</h2>
+
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h3>Méthodologie</h3>
+                    <p>Cette étude utilise la technologie d'<strong>eye-tracking (oculométrie)</strong> pour analyser
+                        comment les enfants regardent des visages humains.</p>
+
+                    <h4 class="mt-4">Participants</h4>
+                    <ul>
+                        <li><strong>Âge :</strong> 2 à 7 ans</li>
+                        <li><strong>Deux groupes :</strong> DT (Développement Typique) et TSA</li>
+                        <li><strong>Stimuli :</strong> 4 visages d'enfants présentés à l'écran</li>
+                    </ul>
+
+                    <h4 class="mt-4">Zones d'Intérêt (AOI)</h4>
+                    <p>Pour chaque visage, nous avons défini 4 zones d'analyse :</p>
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <div class="parameter-card">
+                                <div class="parameter-name">Écran complet</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="parameter-card">
+                                <div class="parameter-name">Tête</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="parameter-card">
+                                <div class="parameter-icon">
+                                    <img src="assets/icons/oeil.svg" alt="Yeux" class="pictogram">
+                                </div>
+                                <div class="parameter-name">Yeux</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="parameter-card">
+                                <div class="parameter-icon">
+                                    <img src="assets/icons/bouche.svg" alt="Bouche" class="pictogram">
+                                </div>
+                                <div class="parameter-name">Bouche</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Paramètres Mesurés</h4>
+                            <div class="row g-3 mt-2">
+                                <div class="col-6">
+                                    <div class="parameter-card">
+                                        <div class="parameter-icon">
+                                            <img src="assets/icons/ttt.svg" alt="TTT" class="pictogram">
+                                        </div>
+                                        <div class="parameter-name">Temps Total Tracké</div>
+                                        <div class="parameter-abbr">(TTT)</div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="parameter-card">
+                                        <div class="parameter-icon">
+                                            <img src="assets/icons/tp.svg" alt="TP" class="pictogram">
+                                        </div>
+                                        <div class="parameter-name">Temps Passé</div>
+                                        <div class="parameter-abbr">(TP)</div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="parameter-card">
+                                        <div class="parameter-icon">
+                                            <img src="assets/icons/tf.svg" alt="TF" class="pictogram">
+                                        </div>
+                                        <div class="parameter-name">Temps de Fixation</div>
+                                        <div class="parameter-abbr">(TF)</div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="parameter-card">
+                                        <div class="parameter-icon">
+                                            <img src="assets/icons/nbf.svg" alt="NBF" class="pictogram">
+                                        </div>
+                                        <div class="parameter-name">Nombre de Fixations</div>
+                                        <div class="parameter-abbr">(NBF)</div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="parameter-card">
+                                        <div class="parameter-icon">
+                                            <img src="assets/icons/nbz.svg" alt="NBE" class="pictogram">
+                                        </div>
+                                        <div class="parameter-name">Nombre d'Entrées</div>
+                                        <div class="parameter-abbr">(NBE)</div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="parameter-card">
+                                        <div class="parameter-icon">
+                                            <img src="assets/icons/latence.svg" alt="Latence" class="pictogram">
+                                        </div>
+                                        <div class="parameter-name">Latence</div>
+                                        <div class="parameter-abbr">(Lat)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Fonctionnement Eye-Tracking -->
+    <section id="fonctionnement" class="bg-white" aria-label="Fonctionnement de la technologie eye-tracking">
+        <div class="container">
+            <p class="section-label">COMPTINE ANIMÉE</p>
+            <h2 class="text-center mb-5">Une comptine pour découvrir l'eye-tracking</h2>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="eye-tracking-demo">
+                        <div class="video-container-with-flowers">
+                            <!-- 
+                            ========================================
+                            FLEURS DÉCORATIVES SVG - DÉSACTIVÉES
+                            ========================================
+                            
+                            Fleurs décoratives SVG
+                            Fleur 1 - Rose
+                            <svg class="flower flower-1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="12" fill="#FFD700" />
+                                <circle cx="50" cy="30" r="15" fill="#FFB6D9" />
+                                <circle cx="68" cy="40" r="15" fill="#FFB6D9" />
+                                <circle cx="68" cy="60" r="15" fill="#FFB6D9" />
+                                <circle cx="50" cy="70" r="15" fill="#FFB6D9" />
+                                <circle cx="32" cy="60" r="15" fill="#FFB6D9" />
+                                <circle cx="32" cy="40" r="15" fill="#FFB6D9" />
+                            </svg>
+
+                            Fleur 2 - Jaune
+                            <svg class="flower flower-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="12" fill="#FF8A86" />
+                                <ellipse cx="50" cy="25" rx="12" ry="18" fill="#FFE66D" />
+                                <ellipse cx="75" cy="50" rx="18" ry="12" fill="#FFE66D" transform="rotate(90 75 50)" />
+                                <ellipse cx="50" cy="75" rx="12" ry="18" fill="#FFE66D" />
+                                <ellipse cx="25" cy="50" rx="18" ry="12" fill="#FFE66D" transform="rotate(90 25 50)" />
+                                <ellipse cx="65" cy="35" rx="12" ry="16" fill="#FFE66D" transform="rotate(45 65 35)" />
+                                <ellipse cx="65" cy="65" rx="12" ry="16" fill="#FFE66D" transform="rotate(-45 65 65)" />
+                                <ellipse cx="35" cy="65" rx="12" ry="16" fill="#FFE66D" transform="rotate(45 35 65)" />
+                                <ellipse cx="35" cy="35" rx="12" ry="16" fill="#FFE66D" transform="rotate(-45 35 35)" />
+                            </svg>
+
+                            Fleur 3 - Corail
+                            <svg class="flower flower-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="12" fill="#FFD700" />
+                                <circle cx="50" cy="28" r="16" fill="#FF8A86" />
+                                <circle cx="72" cy="50" r="16" fill="#FF8A86" />
+                                <circle cx="50" cy="72" r="16" fill="#FF8A86" />
+                                <circle cx="28" cy="50" r="16" fill="#FF8A86" />
+                                <circle cx="64" cy="36" r="14" fill="#FFB6D9" />
+                                <circle cx="64" cy="64" r="14" fill="#FFB6D9" />
+                                <circle cx="36" cy="64" r="14" fill="#FFB6D9" />
+                                <circle cx="36" cy="36" r="14" fill="#FFB6D9" />
+                            </svg>
+
+                            Fleur 4 - Violette
+                            <svg class="flower flower-4" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="12" fill="#FFE66D" />
+                                <circle cx="50" cy="30" r="15" fill="#C7A3E8" />
+                                <circle cx="68" cy="40" r="15" fill="#C7A3E8" />
+                                <circle cx="68" cy="60" r="15" fill="#C7A3E8" />
+                                <circle cx="50" cy="70" r="15" fill="#C7A3E8" />
+                                <circle cx="32" cy="60" r="15" fill="#C7A3E8" />
+                                <circle cx="32" cy="40" r="15" fill="#C7A3E8" />
+                            </svg>
+
+                            Fleur 5 - Bleue
+                            <svg class="flower flower-5" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="12" fill="#FFD700" />
+                                <ellipse cx="50" cy="28" rx="12" ry="16" fill="#7DD3E8" />
+                                <ellipse cx="72" cy="50" rx="16" ry="12" fill="#7DD3E8" transform="rotate(90 72 50)" />
+                                <ellipse cx="50" cy="72" rx="12" ry="16" fill="#7DD3E8" />
+                                <ellipse cx="28" cy="50" rx="16" ry="12" fill="#7DD3E8" transform="rotate(90 28 50)" />
+                                <ellipse cx="63" cy="37" rx="10" ry="14" fill="#52C7E0" transform="rotate(45 63 37)" />
+                                <ellipse cx="63" cy="63" rx="10" ry="14" fill="#52C7E0" transform="rotate(-45 63 63)" />
+                                <ellipse cx="37" cy="63" rx="10" ry="14" fill="#52C7E0" transform="rotate(45 37 63)" />
+                                <ellipse cx="37" cy="37" rx="10" ry="14" fill="#52C7E0" transform="rotate(-45 37 37)" />
+                            </svg>
+
+                            Fleur 6 - Rose clair
+                            <svg class="flower flower-6" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="12" fill="#FF8A86" />
+                                <circle cx="50" cy="30" r="15" fill="#FFD4E5" />
+                                <circle cx="68" cy="40" r="15" fill="#FFD4E5" />
+                                <circle cx="68" cy="60" r="15" fill="#FFD4E5" />
+                                <circle cx="50" cy="70" r="15" fill="#FFD4E5" />
+                                <circle cx="32" cy="60" r="15" fill="#FFD4E5" />
+                                <circle cx="32" cy="40" r="15" fill="#FFD4E5" />
+                            </svg>
+
+                            Fleur 7 - Orange
+                            <svg class="flower flower-7" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="12" fill="#FFD700" />
+                                <ellipse cx="50" cy="25" rx="12" ry="18" fill="#FFB347" />
+                                <ellipse cx="75" cy="50" rx="18" ry="12" fill="#FFB347" transform="rotate(90 75 50)" />
+                                <ellipse cx="50" cy="75" rx="12" ry="18" fill="#FFB347" />
+                                <ellipse cx="25" cy="50" rx="18" ry="12" fill="#FFB347" transform="rotate(90 25 50)" />
+                                <ellipse cx="65" cy="35" rx="12" ry="16" fill="#FFA07A" transform="rotate(45 65 35)" />
+                                <ellipse cx="65" cy="65" rx="12" ry="16" fill="#FFA07A" transform="rotate(-45 65 65)" />
+                                <ellipse cx="35" cy="65" rx="12" ry="16" fill="#FFA07A" transform="rotate(45 35 65)" />
+                                <ellipse cx="35" cy="35" rx="12" ry="16" fill="#FFA07A" transform="rotate(-45 35 35)" />
+                            </svg>
+
+                            Fleur 8 - Menthe
+                            <svg class="flower flower-8" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="12" fill="#FFE66D" />
+                                <circle cx="50" cy="28" r="16" fill="#98E4D8" />
+                                <circle cx="72" cy="50" r="16" fill="#98E4D8" />
+                                <circle cx="50" cy="72" r="16" fill="#98E4D8" />
+                                <circle cx="28" cy="50" r="16" fill="#98E4D8" />
+                                <circle cx="64" cy="36" r="14" fill="#B8F0E8" />
+                                <circle cx="64" cy="64" r="14" fill="#B8F0E8" />
+                                <circle cx="36" cy="64" r="14" fill="#B8F0E8" />
+                                <circle cx="36" cy="36" r="14" fill="#B8F0E8" />
+                            </svg>
+
+                            Fleurs supplémentaires pour effet luxuriant
+                            Fleur 9 - Haut gauche intermédiaire
+                            <svg class="flower flower-9" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="12" fill="#FFD700" />
+                                <circle cx="50" cy="30" r="15" fill="#FFA5D8" />
+                                <circle cx="68" cy="40" r="15" fill="#FFA5D8" />
+                                <circle cx="68" cy="60" r="15" fill="#FFA5D8" />
+                                <circle cx="50" cy="70" r="15" fill="#FFA5D8" />
+                                <circle cx="32" cy="60" r="15" fill="#FFA5D8" />
+                                <circle cx="32" cy="40" r="15" fill="#FFA5D8" />
+                            </svg>
+
+                            Fleur 10 - Haut droite intermédiaire
+                            <svg class="flower flower-10" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="12" fill="#FF8A86" />
+                                <ellipse cx="50" cy="25" rx="12" ry="18" fill="#A8E6CF" />
+                                <ellipse cx="75" cy="50" rx="18" ry="12" fill="#A8E6CF" transform="rotate(90 75 50)" />
+                                <ellipse cx="50" cy="75" rx="12" ry="18" fill="#A8E6CF" />
+                                <ellipse cx="25" cy="50" rx="18" ry="12" fill="#A8E6CF" transform="rotate(90 25 50)" />
+                                <ellipse cx="65" cy="35" rx="12" ry="16" fill="#C8F5E0" transform="rotate(45 65 35)" />
+                                <ellipse cx="65" cy="65" rx="12" ry="16" fill="#C8F5E0" transform="rotate(-45 65 65)" />
+                                <ellipse cx="35" cy="65" rx="12" ry="16" fill="#C8F5E0" transform="rotate(45 35 65)" />
+                                <ellipse cx="35" cy="35" rx="12" ry="16" fill="#C8F5E0" transform="rotate(-45 35 35)" />
+                            </svg>
+
+                            Fleur 11 - Bas gauche intermédiaire
+                            <svg class="flower flower-11" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="12" fill="#FFE66D" />
+                                <circle cx="50" cy="28" r="16" fill="#FFB8D1" />
+                                <circle cx="72" cy="50" r="16" fill="#FFB8D1" />
+                                <circle cx="50" cy="72" r="16" fill="#FFB8D1" />
+                                <circle cx="28" cy="50" r="16" fill="#FFB8D1" />
+                                <circle cx="64" cy="36" r="14" fill="#FFD4E5" />
+                                <circle cx="64" cy="64" r="14" fill="#FFD4E5" />
+                                <circle cx="36" cy="64" r="14" fill="#FFD4E5" />
+                                <circle cx="36" cy="36" r="14" fill="#FFD4E5" />
+                            </svg>
+
+                            Fleur 12 - Bas droite intermédiaire
+                            <svg class="flower flower-12" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="12" fill="#FFD700" />
+                                <ellipse cx="50" cy="25" rx="12" ry="18" fill="#B8A8E8" />
+                                <ellipse cx="75" cy="50" rx="18" ry="12" fill="#B8A8E8" transform="rotate(90 75 50)" />
+                                <ellipse cx="50" cy="75" rx="12" ry="18" fill="#B8A8E8" />
+                                <ellipse cx="25" cy="50" rx="18" ry="12" fill="#B8A8E8" transform="rotate(90 25 50)" />
+                                <ellipse cx="65" cy="35" rx="12" ry="16" fill="#D4C8F0" transform="rotate(45 65 35)" />
+                                <ellipse cx="65" cy="65" rx="12" ry="16" fill="#D4C8F0" transform="rotate(-45 65 65)" />
+                                <ellipse cx="35" cy="65" rx="12" ry="16" fill="#D4C8F0" transform="rotate(45 35 65)" />
+                                <ellipse cx="35" cy="35" rx="12" ry="16" fill="#D4C8F0" transform="rotate(-45 35 35)" />
+                            </svg>
+                            
+                            ========================================
+                            FIN DES FLEURS DÉSACTIVÉES
+                            ========================================
+                            -->
+
+                            <div
+                                style="overflow: hidden; border-radius: var(--radius-md); width: 100%; position: relative; z-index: 5;">
+                                <video autoplay loop muted playsinline
+                                    style="width: 120%; height: auto; transform: scale(1.8); transform-origin: center; justify-self: center;">
+                                    <source src="assets/8095efe2-d385-4e5b-9291-c2f264cdc205_720p_mp4_30_16-9.mp4"
+                                        type="video/mp4">
+                                    Votre navigateur ne supporte pas la balise vidéo.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3>Principe de l'Oculométrie</h3>
+                        <p>L'<strong>eye-tracking</strong> (ou oculométrie) est une technologie qui permet de suivre et
+                            d'enregistrer les mouvements oculaires en temps réel. Un dispositif infrarouge détecte la
+                            position du regard sur l'écran.</p>
+
+                        <h4 class="mt-4">Ce que nous mesurons :</h4>
+                        <ul>
+                            <li><strong>Fixations :</strong> Moments où le regard reste stable sur une zone</li>
+                            <li><strong>Saccades :</strong> Mouvements rapides entre deux fixations</li>
+                            <li><strong>Parcours du regard :</strong> Trajectoire complète de l'exploration visuelle
+                            </li>
+                            <li><strong>Latence :</strong> Temps avant la première visite d'une zone</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Résultats Interactifs -->
+    <section id="resultats" style="background-color: var(--neutral-100);" aria-label="Résultats de l'étude">
+        <div class="container">
+            <p class="section-label">RÉSULTATS</p>
+            <h2 class="text-center mb-5">Découvrez les résultats de l'étude</h2>
+
+            <!-- Filters -->
+            <div class="filters">
+                <h3 class="mb-4">Explorez les Données</h3>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="filter-group">
+                            <label class="filter-label">Sélectionnez un visage</label>
+                            <div class="filter-buttons">
+                                <button class="filter-btn active" data-filter="face" data-value="1">Visage 1</button>
+                                <button class="filter-btn" data-filter="face" data-value="2">Visage 2</button>
+                                <button class="filter-btn" data-filter="face" data-value="3">Visage 3</button>
+                                <button class="filter-btn" data-filter="face" data-value="4">Visage 4</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="filter-group">
+                            <label class="filter-label">Zone d'intérêt</label>
+                            <div class="filter-buttons">
+                                <button class="filter-btn active" data-filter="zone" data-value="ecran">Écran</button>
+                                <button class="filter-btn" data-filter="zone" data-value="tete">Tête</button>
+                                <button class="filter-btn" data-filter="zone" data-value="yeux">Yeux</button>
+                                <button class="filter-btn" data-filter="zone" data-value="bouche">Bouche</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="filter-group">
+                            <label class="filter-label">Paramètre</label>
+                            <select class="form-select" id="parameterSelect">
+                                <option value="tf">Temps de Fixation (TF)</option>
+                                <option value="nbf">Nombre de Fixations (NBF)</option>
+                                <option value="tp">Temps Passé (TP)</option>
+                                <option value="nbe">Nombre d'Entrées (NBE)</option>
+                                <option value="latence">Latence (Lat)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Face Selection Visual -->
+            <div class="face-grid mt-5">
+                <div class="face-card active" data-face="1">
+                    <div class="face-image-container">
+                        <img src="assets/faces/SVG/vsg01.svg" alt="Visage 1" class="face-photo">
+
+                    </div>
+                    <div class="face-label">Visage 1</div>
+                </div>
+                <div class="face-card" data-face="2">
+                    <div class="face-image-container">
+                        <img src="assets/faces/SVG/vsg02.svg" alt="Visage 2" class="face-photo">
+
+                    </div>
+                    <div class="face-label">Visage 2</div>
+                </div>
+                <div class="face-card" data-face="3">
+                    <div class="face-image-container">
+                        <img src="assets/faces/SVG/vsg03.svg" alt="Visage 3" class="face-photo">
+
+                    </div>
+                    <div class="face-label">Visage 3</div>
+                </div>
+                <div class="face-card" data-face="4">
+                    <div class="face-image-container">
+                        <img src="assets/faces/SVG/vsg04.svg" alt="Visage 4" class="face-photo">
+
+                    </div>
+                    <div class="face-label">Visage 4</div>
+                </div>
+            </div>
+
+
+
+            <!-- Charts -->
+            <div class="row mt-5">
+                <!-- Chart 1: Bar Chart - DT vs TSA -->
+                <div class="col-lg-6 mb-4">
+                    <div class="chart-container">
+                        <h3 class="chart-title">Comparaison DT vs TSA</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="barChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chart 2: Line Chart - Evolution across faces -->
+                <div class="col-lg-6 mb-4">
+                    <div class="chart-container">
+                        <h3 class="chart-title">Évolution sur les 4 Visages</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="lineChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chart 3: Pie Chart - Zone distribution -->
+                <div class="col-lg-6 mb-4">
+                    <div class="chart-container">
+                        <h3 class="chart-title">Répartition par Zone</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="pieChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chart 4: Combined Chart -->
+                <div class="col-lg-6 mb-4">
+                    <div class="chart-container">
+                        <h3 class="chart-title">Analyse Combinée</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="combinedChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Significant Results Highlight -->
+            <div class="card mt-4" style="border-left: 4px solid var(--yellow-accent);">
+                <div class="card-body">
+                    <h4><span class="badge badge-significant">p ≤ 0.05</span> Résultats Significatifs</h4>
+                    <p class="mb-0">Les graphiques mettent en évidence les différences statistiquement significatives
+                        (p-value ≤ 0.05) entre les groupes DT et TSA.</p>
+                </div>
+            </div>
+
+            <!-- Data-Driven Visualizations - Fun & Clear! -->
+            <div class="mt-5">
+                <h3 class="text-center mb-4">Visualisations Ludiques des Données</h3>
+                <p class="text-center mb-5" style="color: var(--marine-blue); font-size: 1.1rem;">
+                    Découvre les résultats de manière fun et interactive !
+                </p>
+
+                <div class="row">
+                    <!-- Visualization: Filling Silhouettes (DT vs TSA) -->
+                    <div class="col-lg-12 mb-4">
+                        <div id="filling-silhouettes-container" data-viz-type="filling-silhouettes">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Conclusions -->
+    <section id="conclusions" class="bg-white">
+        <div class="container">
+            <p class="section-label">CONCLUSIONS</p>
+            <h2 class="text-center mb-5">Implications & Perspectives</h2>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3>Principales Observations</h3>
+                            <ul>
+                                <li>Les enfants avec TSA présentent des <strong>patterns de regard différents</strong>
+                                    lors de l'observation de visages</li>
+                                <li>Des différences significatives sont observées dans le <strong>temps de fixation des
+                                        yeux</strong></li>
+                                <li>La <strong>latence</strong> pour explorer certaines zones varie entre les deux
+                                    groupes</li>
+                                <li>Ces différences peuvent contribuer au <strong>diagnostic précoce</strong> des TSA
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3>Implications Cliniques</h3>
+                            <p>Cette recherche contribue à :</p>
+                            <ul>
+                                <li><strong>Améliorer le diagnostic précoce</strong> des troubles du spectre de
+                                    l'autisme</li>
+                                <li><strong>Personnaliser les interventions</strong> thérapeutiques</li>
+                                <li><strong>Mieux comprendre</strong> les mécanismes de perception sociale dans
+                                    l'autisme</li>
+                                <li><strong>Développer des outils</strong> d'évaluation objectifs et non-invasifs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" style="background-color: var(--blue-light); border: none;">
+                        <div class="card-body">
+                            <h3>À Propos de Cette Recherche</h3>
+                            <p>Cette étude a été menée par une unité de recherche <strong>INSERM</strong> spécialisée
+                                dans les troubles neurodéveloppementaux. L'objectif est de vulgariser des données
+                                scientifiques complexes pour les rendre accessibles au grand public tout en maintenant
+                                la rigueur scientifique.</p>
+                            <p class="mb-0 text-muted text-small">Pour plus d'informations sur les recherches INSERM :
+                                <a href="https://www.inserm.fr" target="_blank" rel="noopener">www.inserm.fr</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Team -->
+    <section id="equipe" style="background: linear-gradient(135deg, var(--blue-light) 0%, var(--neutral-100) 100%);">
+        <div class="container">
+            <h2 class="text-center mb-5">L'Équipe du Projet</h2>
+
+            <div class="row justify-content-center g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card">
+                        <div class="team-photo-wrapper">
+                            <img src="assets/team/Antoine_Ozenne.jpg" alt="Antoine Ozenne" class="team-photo">
+                        </div>
+                        <div class="team-info">
+                            <h4 class="team-name">Antoine Ozenne</h4>
+                            <p class="team-role">Développeur & Designer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card">
+                        <div class="team-photo-wrapper">
+                            <img src="assets/team/Jean_Fontaine.jpg" alt="Jean Fontaine" class="team-photo">
+                        </div>
+                        <div class="team-info">
+                            <h4 class="team-name">Jean Fontaine</h4>
+                            <p class="team-role">Développeur & Data Viz</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card">
+                        <div class="team-photo-wrapper">
+                            <img src="assets/team/Ibtissam_Bryek.jpg" alt="Ibtissam Bryek" class="team-photo">
+                        </div>
+                        <div class="team-info">
+                            <h4 class="team-name">Ibtissam Bryek</h4>
+                            <p class="team-role">Développeuse & UX Designer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <p class="text-muted">Projet réalisé dans le cadre de la SAE303 - Datavisualisation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: var(--blue-dark); color: white; padding: var(--spacing-xl) 0;">
+        <div class="container text-center">
+            <p class="mb-2">&copy; 2025 - Tous droits réservés</p>
+            <p class="text-small mb-0" style="opacity: 0.8;">Site de vulgarisation scientifique - Recherche sur
+                l'eye-tracking et l'autisme</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/face-interactions.js"></script>
+    <script src="js/parameter-explanations.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Interactive Playground Scripts -->
+    <script src="js/interactive-playground.js"></script>
+    <script src="js/decorative-elements.js"></script>
+    <script src="js/scroll-animations.js"></script>
+    <script src="js/people-visualization.js"></script>
+</body>
+
+</html>
