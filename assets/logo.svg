@@ -1,0 +1,35 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gear/Cog outer circle with teeth -->
+  <g id="gear">
+    <!-- Main gear circle -->
+    <circle cx="24" cy="24" r="20" fill="none" stroke="#4A90E2" stroke-width="2" stroke-dasharray="4 2" opacity="0.8"/>
+    
+    <!-- Gear teeth (dotted pattern) -->
+    <circle cx="24" cy="4" r="2" fill="#4A90E2" opacity="0.6"/>
+    <circle cx="37.9" cy="10.1" r="2" fill="#4A90E2" opacity="0.6"/>
+    <circle cx="43.9" cy="24" r="2" fill="#4A90E2" opacity="0.6"/>
+    <circle cx="37.9" cy="37.9" r="2" fill="#4A90E2" opacity="0.6"/>
+    <circle cx="24" cy="44" r="2" fill="#4A90E2" opacity="0.6"/>
+    <circle cx="10.1" cy="37.9" r="2" fill="#4A90E2" opacity="0.6"/>
+    <circle cx="4" cy="24" r="2" fill="#4A90E2" opacity="0.6"/>
+    <circle cx="10.1" cy="10.1" r="2" fill="#4A90E2" opacity="0.6"/>
+    
+    <!-- Inner circle -->
+    <circle cx="24" cy="24" r="14" fill="#A6FBFF" opacity="0.2"/>
+    
+    <!-- Eye center -->
+    <ellipse cx="24" cy="24" rx="8" ry="10" fill="white" stroke="#4A90E2" stroke-width="1.5"/>
+    
+    <!-- Pupil -->
+    <circle cx="24" cy="24" r="4" fill="#4A90E2"/>
+    
+    <!-- Highlight -->
+    <circle cx="25.5" cy="22.5" r="1.5" fill="#FEEFA6"/>
+    
+    <!-- Crosshair for tracking -->
+    <line x1="24" y1="14" x2="24" y2="18" stroke="#FEEFA6" stroke-width="1" opacity="0.8"/>
+    <line x1="24" y1="30" x2="24" y2="34" stroke="#FEEFA6" stroke-width="1" opacity="0.8"/>
+    <line x1="14" y1="24" x2="18" y2="24" stroke="#FEEFA6" stroke-width="1" opacity="0.8"/>
+    <line x1="30" y1="24" x2="34" y2="24" stroke="#FEEFA6" stroke-width="1" opacity="0.8"/>
+  </g>
+</svg>

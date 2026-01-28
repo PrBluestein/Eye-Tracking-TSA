@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Analyse du comportement utilisateur sur notre site web via eye-tracking - Tests UX avec des participants">
+    <meta name="keywords" content="eye-tracking, UX, analyse utilisateur, ergonomie web, comportement utilisateur">
+    <meta name="author" content="INSERM">
+
+    <title>Analyse Eye-Tracking UX - Comportement Utilisateur</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/wavy-sections.css">
+</head>
+
+<body>
+
+    <!-- Navigation (sticky) -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm"
+        style="background: linear-gradient(90deg, #009DC1 0%, #005291 100%);" aria-label="Navigation principale">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html" style="color: white; font-weight: 700;">
+                <img src="assets/logo.svg" alt="Logo Eye-Tracking TSA"
+                    style="height: 40px; margin-right: 10px; vertical-align: middle;">
+                Eye-Tracking & TSA
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#contexte"
+                            style="color: white; font-weight: 600;">Contexte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#experience"
+                            style="color: white; font-weight: 600;">L'Expérience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#fonctionnement"
+                            style="color: white; font-weight: 600;">Eye-Tracking</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#resultats"
+                            style="color: white; font-weight: 600;">Résultats</a></li>
+                    <li class="nav-item"><a class="nav-link" href="analyse-eyetracking.html"
+                            style="color: white; font-weight: 600; text-decoration: underline;">Analyse UX</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-new" aria-label="Introduction à l'analyse eye-tracking UX">
+        <div class="container">
+            <span class="badge-info">Analyse UX • Eye-Tracking Web</span>
+            <h1>Analyse du <span class="text-primary">Comportement Utilisateur</span></h1>
+            <p class="lead">Découvrez comment des participants au développement typique (DT) naviguent et interagissent
+                avec notre site web
+                grâce à l'eye-tracking.</p>
+
+            <div class="hero-actions">
+                <button class="btn-primary"
+                    onclick="document.getElementById('videos').scrollIntoView({behavior: 'smooth'})">Voir les vidéos
+                    ↓</button>
+                <button class="btn-secondary"
+                    onclick="document.getElementById('insights').scrollIntoView({behavior: 'smooth'})">Découvrir les
+                    insights</button>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Participants testés</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Développement Typique (DT)</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">UX</div>
+                    <div class="stat-label">Analyse ergonomique</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Objectif de l'analyse -->
+    <section id="objectif" class="bg-white" aria-label="Objectif de l'analyse">
+        <div class="container">
+            <p class="section-label">OBJECTIF</p>
+            <h2 class="text-center mb-5">Pourquoi analyser le comportement utilisateur ?</h2>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3>Comprendre l'expérience utilisateur</h3>
+                            <p>L'eye-tracking nous permet de visualiser exactement comment les utilisateurs
+                                <strong>explorent notre site web</strong>, quelles zones attirent leur attention, et
+                                comment ils naviguent à travers le contenu.
+                            </p>
+
+                            <h4 class="mt-4">Ce que nous analysons :</h4>
+                            <ul>
+                                <li><strong>Parcours visuel :</strong> Comment l'œil se déplace sur la page</li>
+                                <li><strong>Zones d'intérêt :</strong> Quels éléments captent l'attention</li>
+                                <li><strong>Temps de fixation :</strong> Combien de temps sur chaque élément</li>
+                                <li><strong>Points de friction :</strong> Où les utilisateurs hésitent ou se perdent
+                                </li>
+                            </ul>
+
+                            <p class="mb-0 text-muted">Ces données nous aident à <strong>optimiser l'ergonomie</strong>
+                                et à créer une expérience plus intuitive pour tous les visiteurs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Vidéos Eye-Tracking -->
+    <section id="videos" style="background-color: var(--neutral-100);" aria-label="Vidéos des tests eye-tracking">
+        <div class="container">
+            <p class="section-label">VIDÉOS</p>
+            <h2 class="text-center mb-5">Tests Eye-Tracking en Action</h2>
+
+            <div class="row">
+                <!-- Vidéo 1: Thomas -->
+                <div class="col-lg-6 mb-4">
+                    <div class="video-analysis-card">
+                        <div class="video-header">
+                            <h3>Thomas</h3>
+                            <span class="badge badge-dt">Développement Typique (DT)</span>
+                        </div>
+                        <div class="video-wrapper">
+                            <video controls preload="metadata" class="analysis-video">
+                                <source src="assets/video eye tracking/thomascrop (1).mp4" type="video/mp4">
+                                Votre navigateur ne supporte pas la lecture de cette vidéo.
+                            </video>
+                        </div>
+                        <div class="video-description">
+                            <h4>Observations clés</h4>
+                            <ul>
+                                <li>Focus sur la "Course des Regards"</li>
+                                <li>Alternance entre les zones du visage et les explications</li>
+                                <li>Forte attention portée aux zones d'intérêt visuel</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vidéo 2: Anaïs -->
+                <div class="col-lg-6 mb-4">
+                    <div class="video-analysis-card">
+                        <div class="video-header">
+                            <h3>Anaïs</h3>
+                            <span class="badge badge-dt">Développement Typique (DT)</span>
+                        </div>
+                        <div class="video-wrapper">
+                            <video controls preload="metadata" class="analysis-video">
+                                <source src="assets/video eye tracking/anaiscrop (1).mp4" type="video/mp4">
+                                Votre navigateur ne supporte pas la lecture de cette vidéo.
+                            </video>
+                        </div>
+                        <div class="video-description">
+                            <h4>Observations clés</h4>
+                            <ul>
+                                <li>Exploration des éléments interactifs (accordéons)</li>
+                                <li>Analyse détaillée des cartes de résultats</li>
+                                <li>Navigation structurée entre les catégories</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vidéo 3: Tahys -->
+                <div class="col-lg-6 mb-4">
+                    <div class="video-analysis-card">
+                        <div class="video-header">
+                            <h3>Tahys</h3>
+                            <span class="badge badge-dt">Développement Typique (DT)</span>
+                        </div>
+                        <div class="video-wrapper">
+                            <video controls preload="metadata" class="analysis-video">
+                                <source src="assets/video eye tracking/tahyscrop (1).mp4" type="video/mp4">
+                                Votre navigateur ne supporte pas la lecture de cette vidéo.
+                            </video>
+                        </div>
+                        <div class="video-description">
+                            <h4>Observations clés</h4>
+                            <ul>
+                                <li>Analyse approfondie de la section méthodologie</li>
+                                <li>Focus sur les icônes de paramètres (TP, NBF)</li>
+                                <li>Lecture attentive des colonnes explicatives</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vidéo 4: Andreia -->
+                <div class="col-lg-6 mb-4">
+                    <div class="video-analysis-card">
+                        <div class="video-header">
+                            <h3>Andreia</h3>
+                            <span class="badge badge-dt">Développement Typique (DT)</span>
+                        </div>
+                        <div class="video-wrapper">
+                            <video controls preload="metadata" class="analysis-video">
+                                <source src="assets/video eye tracking/andreiacrop (1).mp4" type="video/mp4">
+                                Votre navigateur ne supporte pas la lecture de cette vidéo.
+                            </video>
+                        </div>
+                        <div class="video-description">
+                            <h4>Observations clés</h4>
+                            <ul>
+                                <li>Attention portée aux chiffres clés de l'étude</li>
+                                <li>Parcours structuré de l'introduction (Hero section)</li>
+                                <li>Forte réactivité à la hiérarchie visuelle du site</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Note technique -->
+            <div class="card mt-4" style="border-left: 4px solid var(--primary-blue);">
+                <div class="card-body">
+                    <h4>📹 Note technique</h4>
+                    <p class="mb-0">Les vidéos montrent le suivi oculaire en temps réel. Le point rouge/curseur
+                        représente la position du regard du participant sur l'écran. Les zones où le regard reste fixe
+                        plus longtemps indiquent un intérêt accru ou une difficulté de compréhension.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Insights & Analyse -->
+    <section id="insights" class="bg-white" aria-label="Insights et analyse des résultats">
+        <div class="container">
+            <p class="section-label">INSIGHTS</p>
+            <h2 class="text-center mb-5">Ce que nous avons appris</h2>
+
+            <div class="row">
+                <!-- Insight 1 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="insight-card">
+                        <div class="insight-icon">👁️</div>
+                        <h3>Zones d'attention prioritaires</h3>
+                        <p>Les utilisateurs regardent d'abord les <strong>titres</strong>, puis les
+                            <strong>images</strong>, et enfin le texte descriptif. La hiérarchie visuelle fonctionne
+                            bien.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Insight 2 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="insight-card">
+                        <div class="insight-icon">🎯</div>
+                        <h3>Navigation intuitive</h3>
+                        <p>Les participants trouvent facilement les sections grâce à la <strong>navigation
+                                sticky</strong> et aux <strong>ancres de section</strong> bien visibles.</p>
+                    </div>
+                </div>
+
+                <!-- Insight 3 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="insight-card">
+                        <div class="insight-icon">📊</div>
+                        <h3>Engagement visuel</h3>
+                        <p>Les <strong>graphiques interactifs</strong> et les <strong>cartes colorées</strong> captent
+                            l'attention et encouragent l'exploration du contenu.</p>
+                    </div>
+                </div>
+
+                <!-- Insight 4 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="insight-card">
+                        <div class="insight-icon">⚡</div>
+                        <h3>Parcours en F</h3>
+                        <p>Le pattern de lecture suit une forme en <strong>F</strong> : lecture horizontale en haut,
+                            puis scan vertical à gauche, typique d'une bonne ergonomie web.</p>
+                    </div>
+                </div>
+
+                <!-- Insight 5 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="insight-card">
+                        <div class="insight-icon">🎨</div>
+                        <h3>Design accessible</h3>
+                        <p>Les <strong>couleurs contrastées</strong> et les <strong>espaces généreux</strong>
+                            facilitent la lecture et réduisent la fatigue visuelle.</p>
+                    </div>
+                </div>
+
+                <!-- Insight 6 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="insight-card">
+                        <div class="insight-icon">✅</div>
+                        <h3>Appels à l'action clairs</h3>
+                        <p>Les <strong>boutons</strong> sont bien identifiés et attirent le regard au bon moment dans
+                            le parcours utilisateur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Recommandations -->
+    <section id="recommandations" style="background-color: var(--neutral-100);"
+        aria-label="Recommandations d'amélioration">
+        <div class="container">
+            <p class="section-label">RECOMMANDATIONS</p>
+            <h2 class="text-center mb-5">Pistes d'amélioration</h2>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card mb-4" style="border-left: 4px solid var(--distinctive-red);">
+                        <div class="card-body">
+                            <h3>🔍 Optimisations possibles</h3>
+                            <ul>
+                                <li><strong>Réduire la densité textuelle</strong> dans certaines sections pour
+                                    améliorer la lisibilité</li>
+                                <li><strong>Ajouter plus d'espaces blancs</strong> entre les blocs de contenu pour
+                                    guider le regard</li>
+                                <li><strong>Renforcer les contrastes</strong> sur certains éléments secondaires</li>
+                                <li><strong>Optimiser le temps de chargement</strong> des vidéos et animations</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" style="background-color: var(--primary-blue-lighter); border: none;">
+                        <div class="card-body">
+                            <h3>💡 Points forts à conserver</h3>
+                            <ul>
+                                <li>Navigation claire et accessible</li>
+                                <li>Hiérarchie visuelle bien définie</li>
+                                <li>Utilisation efficace des couleurs et des icônes</li>
+                                <li>Interactivité engageante sans surcharge</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Méthodologie -->
+    <section id="methodologie" class="bg-white" aria-label="Méthodologie de test">
+        <div class="container">
+            <p class="section-label">MÉTHODOLOGIE</p>
+            <h2 class="text-center mb-5">Comment nous avons procédé</h2>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Protocole de test</h3>
+
+                            <h4 class="mt-4">Participants</h4>
+                            <p>Nous avons recruté des <strong>participants au développement typique (DT)</strong> pour
+                                analyser l'ergonomie générale du site web. Ces tests UX sont distincts de notre
+                                recherche scientifique sur les TSA.</p>
+
+                            <h4 class="mt-4">Matériel</h4>
+                            <ul>
+                                <li>Dispositif eye-tracking calibré</li>
+                                <li>Écran standard (résolution 1920x1080)</li>
+                                <li>Enregistrement vidéo du parcours oculaire</li>
+                            </ul>
+
+                            <h4 class="mt-4">Tâches demandées</h4>
+                            <ul>
+                                <li>Explorer librement le site web</li>
+                                <li>Trouver des informations spécifiques (résultats, méthodologie)</li>
+                                <li>Interagir avec les éléments interactifs (filtres, graphiques)</li>
+                            </ul>
+
+                            <h4 class="mt-4">Analyse</h4>
+                            <p class="mb-0">Les vidéos ont été analysées pour identifier les <strong>patterns de
+                                    navigation</strong>, les <strong>zones d'intérêt</strong>, et les
+                                <strong>points de friction</strong> potentiels dans l'expérience utilisateur.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: linear-gradient(90deg, #005291 0%, #003D6B 100%); color: white; padding: 2rem 0;">
+        <div class="container text-center">
+            <p class="mb-2">© 2026 INSERM - Eye-Tracking & TSA</p>
+            <p class="mb-0">
+                <a href="index.html" style="color: #33B1D1; text-decoration: none;">Retour à l'étude principale</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- MASCOT (LE PROF) -->
+    <div class="mascot-container" id="mascotContainer">
+        <div class="mascot-bubble" id="mascotBubble">Besoin d'aide ? Le Professeur Bluestein est là !</div>
+        <div class="mascot-img-wrapper" id="mascotTrigger">
+            <img src="assets/prof/profbouchefermé.png" alt="Professeur Bluestein" class="mascot-img" id="mascotImg">
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/mascot.js"></script>
+</body>
+
+</html>

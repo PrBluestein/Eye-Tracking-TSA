@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soutenance SAE303 - Plan Officiel</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .quick-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 10001;
+            padding: 10px 20px;
+            background: var(--blue-dark);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .quick-toggle:hover {
+            background: var(--blue-primary);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .key-hint {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+        }
+    </style>
+</head>
+
+<body class="soutenance-body">
+
+    <a href="index.html" class="quick-toggle" title="Voir le site (V)">
+        <span>Voir le site</span>
+        <span class="key-hint">V</span>
+    </a>
+
+    <!-- MASCOT (LE PROF) -->
+    <div class="mascot-container" id="mascotContainer">
+        <div class="mascot-bubble" id="mascotBubble">Prêt pour la présentation ? Bluestein est avec vous !</div>
+        <div class="mascot-img-wrapper" id="mascotTrigger">
+            <img src="assets/prof/profbouchefermé.png" alt="Professeur Bluestein" class="mascot-img" id="mascotImg">
+        </div>
+    </div>
+
+    <div class="presentation-bg"></div>
+    <div class="presentation-progress" id="progressBar"></div>
+    <div class="presentation-counter" id="slideCounter">1 / 9</div>
+
+    <main class="presentation-container">
+
+        <!-- SLIDE 1: Intro -->
+        <section class="slide active">
+            <div class="slide-content text-center">
+                <img src="assets/logo.svg" alt="Logo" style="height: 60px; margin-bottom: 20px;">
+                <h1 class="slide-title">Soutenance SAE 303</h1>
+                <h2 style="color: var(--blue-primary); font-weight: 600; margin-bottom: 30px;">Analyse du Regard &
+                    Autisme</h2>
+                <div class="row g-4 mt-2 justify-content-center">
+                    <div class="col-md-3">
+                        <img src="assets/team/Antoine_Ozenne.jpg" class="team-photo-wrapper"
+                            style="width: 110px; height: 110px; border-width: 3px;">
+                        <p style="font-weight: 600; margin-bottom: 0;">Antoine Ozenne</p>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="assets/team/Jean_Fontaine.jpg" class="team-photo-wrapper"
+                            style="width: 110px; height: 110px; border-width: 3px;">
+                        <p style="font-weight: 600; margin-bottom: 0;">Jean Fontaine</p>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="assets/team/Ibtissam_Bryek.jpg" class="team-photo-wrapper"
+                            style="width: 110px; height: 110px; border-width: 3px;">
+                        <p style="font-weight: 600; margin-bottom: 0;">Ibtissam Bryek</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: Contexte -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2 class="slide-title">Contexte de la Recherche</h2>
+                <div class="slide-grid">
+                    <div class="slide-body">
+                        <ul>
+                            <li><strong>Partenariat :</strong> Unité de recherche INSERM.</li>
+                            <li><strong>Sujet :</strong> Étude du développement visuel chez l'enfant.</li>
+                            <li><strong>Enjeu :</strong> Traduire des données scientifiques en un média de
+                                vulgarisation.</li>
+                            <li><strong>Public :</strong> Familles et curieux (besoin de simplicité et clarté).</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <div class="badge-info mb-3">Recherche INSERM</div>
+                        <img src="assets/icons/ecran.webp" style="width: 150px; opacity: 0.8;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: Appropriation du sujet -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2 class="slide-title">Appropriation du Sujet</h2>
+                <div class="slide-grid">
+                    <div class="slide-body">
+                        <ul>
+                            <li><strong>Analyse de Données :</strong> Dataset complet de 44 enfants (2-7 ans).</li>
+                            <li><strong>Terminologie :</strong> Distinction DT (Typique) vs TSA (Autisme).</li>
+                            <li><strong>Métrigues :</strong> TF, TP, Latence... comprendre ce que l'œil raconte.</li>
+                            <li><strong>Objectif :</strong> Humaniser les chiffres via l'interactivité.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="card p-3 shadow-sm border-0" style="background: white;">
+                            <code style="color: var(--blue-dark); font-size: 0.9rem;">
+                                face: { zone: { param: { group: value } } }
+                            </code>
+                            <p class="text-muted small mt-2">Structure modulaire pour une navigation fluide.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 4: Organisation / Répartition -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2 class="slide-title">Organisation & Gestion de Projet</h2>
+                <div class="row g-4 mt-2">
+                    <div class="col-md-4">
+                        <div class="card p-3 h-100 border-0 shadow-sm" style="background: rgba(0, 157, 193, 0.05);">
+                            <h4 style="color: var(--blue-primary);">Antoine</h4>
+                            <p class="small">Direction artistique, Design System (style.css), UX de la landing page.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-3 h-100 border-0 shadow-sm" style="background: rgba(0, 82, 145, 0.05);">
+                            <h4 style="color: var(--blue-primary);">Jean</h4>
+                            <p class="small">Développement Data Viz, Logique Chart.js, Mappage des données Excel.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-3 h-100 border-0 shadow-sm" style="background: rgba(255, 88, 82, 0.05);">
+                            <h4 style="color: var(--blue-primary);">Ibtissam</h4>
+                            <p class="small">Analyse UX, Montage des vidéos eye-tracking, Étude qualitative.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 5: DA (Pictos, Couleurs, Visages) -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2 class="slide-title">Identité Visuelle (DA)</h2>
+                <div class="slide-grid">
+                    <div class="slide-body">
+                        <ul>
+                            <li><strong>Couleurs :</strong> DT (Rouge `#FF5852`) vs TSA (Bleu `#005291`).</li>
+                            <li><strong>Pictogrammes :</strong> Univers douceur, formes rondes, icons minimalistes.</li>
+                            <li><strong>Visages SVG :</strong> Vectoriels pour une interaction précise sur les zones
+                                (Yeux, Bouche, Tête).</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <div class="row g-2 mb-3 justify-content-center">
+                            <div class="col-3"><img src="assets/icons/oeil.svg" width="40"></div>
+                            <div class="col-3"><img src="assets/icons/bouche.svg" width="40"></div>
+                            <div class="col-3"><img src="assets/icons/tete.webp" width="40"></div>
+                        </div>
+                        <img src="assets/faces/SVG/vsg02.svg"
+                            style="height: 180px; border-radius: 10px; border: 2px solid white;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 6: Site (Structure & Pensée) -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2 class="slide-title">Le Site : Architecture & Choix</h2>
+                <div class="slide-grid">
+                    <div class="slide-body">
+                        <ul>
+                            <li><strong>Choix des Chiffres :</strong> 4 graphiques complémentaires pour croiser les
+                                regards (comparaison, évolution, répartition).</li>
+                            <li><strong>Animation :</strong> Réalisation de la comptine animée via des transformations
+                                CSS performantes.</li>
+                            <li><strong>Structure :</strong> Scroll story-telling pour guider le lecteur du contexte aux
+                                résultats.</li>
+                        </ul>
+                    </div>
+                    <div class="card p-3 border-0 shadow-sm" style="background: white;">
+                        <img src="assets/illustrations/dataviz@4x.webp" class="img-fluid"
+                            style="max-height: 200px; object-fit: contain;">
+                        <p class="text-center small mt-2">Justification du puzzle : la granularité de l'attention.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 7: Analyse UX -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2 class="slide-title">Analyse UX</h2>
+                <div class="slide-grid">
+                    <div class="slide-body">
+                        <ul>
+                            <li><strong>Vidéos :</strong> Intégration de 4 parcours (Thomas, Anaïs, Tahys, Andreia).
+                            </li>
+                            <li><strong>Constat :</strong> Visualisation directe du pattern de regard DT vs TSA.</li>
+                            <li><strong>Immersion :</strong> Permettre au public de "voir à travers les yeux" des
+                                participants.</li>
+                        </ul>
+                    </div>
+                    <div class="card p-2 border-0 shadow-sm" style="background: white;">
+                        <video autoplay loop muted style="width: 100%; border-radius: 5px;">
+                            <source src="assets/video eye tracking/thomascrop (1).mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 8: Améliorations -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2 class="slide-title">Pistes d'Amélioration</h2>
+                <div class="slide-grid">
+                    <div class="slide-body">
+                        <ul>
+                            <li><strong>Gamification :</strong> Quiz pour tester sa compréhension de l'autisme.</li>
+                            <li><strong>Data Viz :</strong> Comparaison multi-visages simultanée.</li>
+                            <li><strong>Accessibilité :</strong> Synthèse vocale pour les points clés des graphiques.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <div style="font-size: 5rem; opacity: 0.2;">🚀</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 9: Conclusion -->
+        <section class="slide">
+            <div class="slide-content text-center">
+                <h2 class="slide-title">Conclusion</h2>
+                <div class="slide-body mt-4">
+                    <p>Une synergie entre <strong>Data Science</strong> et <strong>Design Inclusif</strong>.</p>
+                    <p>Un outil de vulgarisation pérenne pour l'INSERM.</p>
+                </div>
+                <div style="margin: 40px 0;">
+                    <img src="assets/logo.svg" style="height: 50px;">
+                </div>
+                <p style="font-weight: 700; color: var(--blue-primary); font-size: 1.5rem;">Merci de votre attention !
+                </p>
+                <div class="mt-4">
+                    <a href="index.html" class="btn-primary" style="text-decoration: none;">Accéder au site
+                        interactif</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="presentation-controls">
+        <button class="control-btn" id="prevBtn" title="Précédent (←)">&#8592;</button>
+        <button class="control-btn" id="nextBtn" title="Suivant (→)">&#8594;</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/mascot.js"></script>
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const progressBar = document.getElementById('progressBar');
+        const slideCounter = document.getElementById('slideCounter');
+
+        let currentSlide = 0;
+
+        function updateSlide() {
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === slides.length - 1;
+
+            const progress = ((currentSlide + 1) / slides.length) * 100;
+            progressBar.style.width = `${progress}%`;
+            slideCounter.textContent = `${currentSlide + 1} / ${slides.length}`;
+
+            window.location.hash = `slide-${currentSlide + 1}`;
+            localStorage.setItem('presentation-current-slide', currentSlide);
+        }
+
+        prevBtn.addEventListener('click', () => { if (currentSlide > 0) { currentSlide--; updateSlide(); } });
+        nextBtn.addEventListener('click', () => { if (currentSlide < slides.length - 1) { currentSlide++; updateSlide(); } });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+                if (currentSlide < slides.length - 1) { currentSlide++; updateSlide(); }
+            } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+                if (currentSlide > 0) { currentSlide--; updateSlide(); }
+            } else if (e.key.toLowerCase() === 'v') {
+                window.location.href = 'index.html';
+            }
+        });
+
+        // Load saved slide if present
+        const savedSlide = localStorage.getItem('presentation-current-slide');
+        if (savedSlide !== null) {
+            currentSlide = parseInt(savedSlide);
+            if (currentSlide >= slides.length) currentSlide = 0;
+        }
+
+        updateSlide();
+    </script>
+</body>
+
+</html>
