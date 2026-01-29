@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#f0f8ff" rx="20"/>
+  
+  <!-- Brain outline -->
+  <path d="M 200 80 Q 280 80 300 140 Q 310 180 290 220 Q 270 250 230 270 Q 200 280 170 270 Q 130 250 110 220 Q 90 180 100 140 Q 120 80 200 80 Z" 
+        fill="#ffffff" stroke="#009dc1" stroke-width="5" stroke-linejoin="round"/>
+  
+  <!-- Neural connections -->
+  <circle cx="160" cy="150" r="8" fill="#009dc1"/>
+  <circle cx="200" cy="140" r="8" fill="#009dc1"/>
+  <circle cx="240" cy="150" r="8" fill="#009dc1"/>
+  <circle cx="180" cy="190" r="8" fill="#009dc1"/>
+  <circle cx="220" cy="190" r="8" fill="#009dc1"/>
+  <circle cx="200" cy="230" r="8" fill="#009dc1"/>
+  
+  <!-- Connection lines -->
+  <line x1="160" y1="150" x2="200" y2="140" stroke="#009dc1" stroke-width="2" opacity="0.6"/>
+  <line x1="200" y1="140" x2="240" y2="150" stroke="#009dc1" stroke-width="2" opacity="0.6"/>
+  <line x1="160" y1="150" x2="180" y2="190" stroke="#009dc1" stroke-width="2" opacity="0.6"/>
+  <line x1="240" y1="150" x2="220" y2="190" stroke="#009dc1" stroke-width="2" opacity="0.6"/>
+  <line x1="180" y1="190" x2="200" y2="230" stroke="#009dc1" stroke-width="2" opacity="0.6"/>
+  <line x1="220" y1="190" x2="200" y2="230" stroke="#009dc1" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Decorative brain waves -->
+  <path d="M 120 160 Q 130 150 140 160 T 160 160" stroke="#009dc1" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M 240 160 Q 250 150 260 160 T 280 160" stroke="#009dc1" stroke-width="2" fill="none" opacity="0.4"/>
+  
+  <!-- Floating elements -->
+  <circle cx="80" cy="100" r="15" fill="#009dc1" opacity="0.1"/>
+  <circle cx="320" cy="280" r="20" fill="#ff5852" opacity="0.1"/>
+  <circle cx="340" cy="120" r="18" fill="#009dc1" opacity="0.1"/>
+</svg>

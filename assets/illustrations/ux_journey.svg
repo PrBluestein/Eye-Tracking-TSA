@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f0f8ff" rx="20"/>
+  
+  <!-- Device/Phone screens -->
+  <rect x="50" y="80" width="100" height="140" fill="#ffffff" stroke="#009dc1" stroke-width="3" rx="10"/>
+  <rect x="60" y="95" width="80" height="110" fill="#e6f7fb" rx="5"/>
+  
+  <rect x="250" y="60" width="100" height="140" fill="#ffffff" stroke="#009dc1" stroke-width="3" rx="10"/>
+  <rect x="260" y="75" width="80" height="110" fill="#e6f7fb" rx="5"/>
+  
+  <!-- Flow arrow -->
+  <path d="M 160 150 L 240 140" stroke="#009dc1" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#009dc1"/>
+    </marker>
+  </defs>
+  
+  <!-- User journey elements on screens -->
+  <circle cx="100" cy="120" r="6" fill="#009dc1"/>
+  <circle cx="100" cy="145" r="6" fill="#009dc1"/>
+  <circle cx="100" cy="170" r="6" fill="#009dc1"/>
+  
+  <rect x="270" y="100" width="60" height="8" fill="#009dc1" rx="4" opacity="0.6"/>
+  <rect x="270" y="120" width="50" height="8" fill="#009dc1" rx="4" opacity="0.6"/>
+  <rect x="270" y="140" width="55" height="8" fill="#ff5852" rx="4" opacity="0.6"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="200" cy="50" r="15" fill="#009dc1" opacity="0.1"/>
+  <circle cx="80" cy="250" r="20" fill="#ff5852" opacity="0.1"/>
+  <circle cx="350" cy="250" r="18" fill="#009dc1" opacity="0.1"/>
+</svg>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.99 40.99">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff5852;
+      }
+
+      .cls-2 {
+        fill: #009dc1;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #009dc1;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        fill: #005291;
+      }
+    </style>
+  </defs>
+  <g id="pictogrammes">
+    <g id="temps_total_tracké" data-name="temps total tracké">
+      <circle class="cls-4" cx="20.5" cy="20.5" r="20.5"/>
+      <circle class="cls-1" cx="20.31" cy="20.82" r="2.09"/>
+      <circle class="cls-2" cx="20.37" cy="29.14" r="1.06"/>
+      <circle class="cls-2" cx="11.92" cy="20.64" r="1.06"/>
+      <circle class="cls-3" cx="20.37" cy="20.64" r="11.85"/>
+      <path class="cls-2" d="M20.37,17.09c.3,0,.58.06.84.18.01-.06.04-.11.04-.17v-5.07c0-.45-.37-.82-.82-.82h-.1c-.45,0-.82.37-.82.82v5.07c0,.06.02.12.04.17.26-.11.54-.18.84-.18Z"/>
+      <path class="cls-2" d="M27.74,19.95h-3.75s-.07.02-.11.02c.12.26.18.55.18.85s-.07.59-.18.85c.04,0,.07.02.11.02h3.75c.4,0,.72-.32.72-.72v-.3c0-.4-.32-.72-.72-.72Z"/>
+    </g>
+  </g>
+</svg>

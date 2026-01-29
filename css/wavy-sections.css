@@ -1,0 +1,223 @@
+
+
+
+section {
+    position: relative;
+    overflow: visible !important;
+}
+
+
+section::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C300,80 600,80 900,0 C1050,40 1150,40 1200,0 L1200,120 L0,120 Z' fill='%23E6F7FB'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+#contexte::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C300,80 600,80 900,0 C1050,40 1150,40 1200,0 L1200,120 L0,120 Z' fill='%23A8DFF0'/%3E%3C/svg%3E");
+}
+
+#experience::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C300,80 600,80 900,0 C1050,40 1150,40 1200,0 L1200,120 L0,120 Z' fill='%237DD3E8'/%3E%3C/svg%3E");
+}
+
+#fonctionnement::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C300,80 600,80 900,0 C1050,40 1150,40 1200,0 L1200,120 L0,120 Z' fill='%2352C7E0'/%3E%3C/svg%3E");
+}
+
+#resultats::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C300,80 600,80 900,0 C1050,40 1150,40 1200,0 L1200,120 L0,120 Z' fill='%2333B1D1'/%3E%3C/svg%3E");
+}
+
+#conclusions::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C300,80 600,80 900,0 C1050,40 1150,40 1200,0 L1200,120 L0,120 Z' fill='%23009DC1'/%3E%3C/svg%3E");
+}
+
+#equipe::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C300,80 600,80 900,0 C1050,40 1150,40 1200,0 L1200,120 L0,120 Z' fill='%23005291'/%3E%3C/svg%3E");
+}
+
+
+.cloud-decoration {
+    position: absolute;
+    width: 150px;
+    height: 80px;
+    background: white;
+    border-radius: 100px;
+    opacity: 0.7;
+    animation: float-cloud 20s ease-in-out infinite;
+    z-index: -1;
+}
+
+.cloud-decoration::before,
+.cloud-decoration::after {
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+.cloud-decoration::before {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    left: 20px;
+}
+
+.cloud-decoration::after {
+    width: 60px;
+    height: 60px;
+    top: -30px;
+    right: 20px;
+}
+
+@keyframes float-cloud {
+
+    0%,
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+
+    50% {
+        transform: translateX(100px) translateY(-20px);
+    }
+}
+
+
+.bubble-decoration {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(0, 157, 193, 0.3));
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: float-bubble 15s ease-in-out infinite;
+    pointer-events: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.bubble-decoration:hover {
+    transform: scale(1.2);
+}
+
+@keyframes float-bubble {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-50px) scale(1.1);
+    }
+}
+
+
+.star-decoration {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid #FFD700;
+    animation: twinkle-star 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+}
+
+.star-decoration::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 25px solid #FFD700;
+    top: 8px;
+    left: -15px;
+}
+
+@keyframes twinkle-star {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(1.2) rotate(180deg);
+    }
+}
+
+
+.parallax-decoration {
+    transition: transform 0.1s ease-out;
+    will-change: transform;
+}
+
+
+.hover-zone {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 88, 82, 0.1) 0%, transparent 70%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hover-zone:hover {
+    background: radial-gradient(circle, rgba(255, 88, 82, 0.3) 0%, transparent 70%);
+    transform: scale(1.5);
+}
+
+
+.heart-decoration {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    animation: float-heart 10s ease-in-out infinite;
+    cursor: pointer;
+}
+
+.heart-decoration::before,
+.heart-decoration::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 24px;
+    background: #FF5852;
+    border-radius: 15px 15px 0 0;
+}
+
+.heart-decoration::before {
+    left: 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart-decoration::after {
+    left: 15px;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+@keyframes float-heart {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(10deg);
+    }
+}
